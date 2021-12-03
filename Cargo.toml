@@ -11,4 +11,25 @@ codegen-units = 1
 lto = "fat"
 panic = "abort"
 
+[lib]
+name = "grid"
+path = "src/lib.rs"
+
 [dependencies]
+dotenv = "0.15"
+
+[dependencies.mongodb]
+version = "2.0"
+default-features = false
+features = ["async-std-runtime"]
+
+[dependencies.rocket]
+git = "https://github.com/SergioBenitez/Rocket"
+version = "0.5.0-rc.1"
+default-features = false
+features = ["json"]
+
+[dependencies.serde]
+version = "1.0"
+default-features = false
+features = ["derive"]
